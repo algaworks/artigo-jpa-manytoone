@@ -1,0 +1,2 @@
+create table if not exists departamento(codigo bigint not null auto_increment, nome varchar(100) not null, primary key (codigo));
+create table if not exists funcionario(codigo bigint not null auto_increment, nome varchar(100) not null, departamento_codigo bigint not null, primary key (codigo), constraint fk_func_dept foreign key (departamento_codigo) references departamento (codigo));
